@@ -1,0 +1,2851 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trendyol Clone</title>
+    <!-- Bootstrap Css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Owl Carousel Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="up">
+                    <ul class="d-flex justify-content-end gap-3">
+                        <li class="list-unstyled"><a class="text-decoration-none" href="">İndirim Kuponlarım</a></li>
+                        <li class="list-unstyled"><a class="text-decoration-none" href="">Trendyol'da Satış Yap</a></li>
+                        <li class="list-unstyled"><a class="text-decoration-none" href="">Yardım & Destek</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="btn btnOffcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            Menü <i class="fa-solid fa-bars-staggered fa-fade"></i>
+          </button>
+          
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h1 class="offcanvas-title" id="offcanvasExampleLabel">trendyol</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="menu-list">
+                <li class="menu-list-content"><i class="fa-solid fa-person-dress"></i> KADIN</li>
+                <li class="menu-list-content"><i class="fa-solid fa-person"></i> ERKEK</li>
+                <li class="menu-list-content"><i class="fa-solid fa-children"></i> ANNE & ÇOCUK</li>
+                <li class="menu-list-content"><i class="fa-solid fa-dumbbell"></i> SPOR & OUTDOOR</li>
+                <li class="menu-list-content"><i class="fa-solid fa-shoe-prints"></i> AYAKKABI & ÇANTA</li>
+                <li class="menu-list-content"><i class="fa-regular fa-clock"></i> SAAT & AKSESUAR</li>
+                <li class="menu-list-content"><i class="fa-solid fa-wand-magic-sparkles"></i> KOZMETİK & KİŞİSEL BAKIM</li>
+                <li class="menu-list-content"><i class="fa-solid fa-house"></i> EV & MOBİLYA</li>
+                <li class="menu-list-content"><i class="fa-solid fa-store"></i> SÜPERMARKET</li>
+                <li class="menu-list-content"><i class="fa-solid fa-plug"></i> ELEKTRONİK</li>
+              </ul>
+            </div>
+          </div>
+        <nav class="navbar" id="stickyNav">
+            <div class="container-fluid">
+                <div class="stickyHeader-img">
+                    <a href=""><img src="./img/logo.png" alt="" class="width 100px"></a>
+                </div>
+              <form class="d-flex" role="search">
+                <div class="sticky-input">
+                    <div class="sticky-input-in">
+                        <input type="text" placeholder="Aradığınız ürün,kategori veya marka yazınız">
+                        <i class="fa-solid fa-magnifying-glass icon"></i>
+                    </div>
+                </div>
+              </form>
+              <div class="accountNavigation">
+                <div class="account-navigation-container">
+                    <div class="account-navigation-wrapper">
+                        <div class="account-nav-item user-login-container">
+                            <div class="account-user">
+                                <div class="account"><span class="link-text"><i class="fa-regular fa-user"></i> Hesabım</span></div>
+                            </div>
+                        </div>
+                        <div class="account-nav-item account-favorites">
+                            <div class="account-user">
+                                <div class="account"><span class="link-text"><i class="fa-regular fa-heart"></i> Favorilerim</span></div>
+                            </div>
+                        </div>
+                        <div class="account-nav-item basket-preview">
+                            <div class="account-user">
+                                <div class="account"><span class="link-text"><i class="fa-solid fa-cart-shopping"></i> Sepetim</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </nav>
+        <div class="navigation">
+            <div class="navigation-wrapper">
+                <div class="nav">
+                    <ul class="main-nav">
+                        <li class="tab-link"><a href="" class="category-header">Kadın</a>
+                        <div class="sub-nav">
+                            <div class="sub-nav-center">
+                                <div class="sub-nav-outer">
+                                    <div class="normal-column">
+                                        <div class="category-box">
+                                            <a href="" class="sub-category-header" >Giyim</a>
+                                            <ul class="sub-item-list">
+                                                <li>Elbise</li>
+                                                <li>Tişört</li>
+                                                <li>Gömlek</li>
+                                                <li>Kot Pantolon</li>
+                                                <li>Kot Ceket</li>
+                                                <li>Pantolon</li>
+                                                <li>Mont</li>
+                                                <li>Bluz</li>
+                                                <li>Ceket</li>
+                                                <li>Etek</li>
+                                                <li>Kazak</li>
+                                                <li>Tesettür</li>
+                                                <li>Büyük Beden</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="normal-column">
+                                        <div class="category-box">
+                                            <a href="" class="sub-category-header" >Giyim</a>
+                                            <ul class="sub-item-list">
+                                                <li>Elbise</li>
+                                                <li>Tişört</li>
+                                                <li>Gömlek</li>
+                                                <li>Kot Pantolon</li>
+                                                <li>Kot Ceket</li>
+                                                <li>Pantolon</li>
+                                                <li>Mont</li>
+                                                <li>Bluz</li>
+                                                <li>Ceket</li>
+                                                <li>Etek</li>
+                                                <li>Kazak</li>
+                                                <li>Tesettür</li>
+                                                <li>Büyük Beden</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="normal-column">
+                                        <div class="category-box">
+                                            <a href="" class="sub-category-header" >Giyim</a>
+                                            <ul class="sub-item-list">
+                                                <li>Elbise</li>
+                                                <li>Tişört</li>
+                                                <li>Gömlek</li>
+                                                <li>Kot Pantolon</li>
+                                                <li>Kot Ceket</li>
+                                                <li>Pantolon</li>
+                                                <li>Mont</li>
+                                                <li>Bluz</li>
+                                                <li>Ceket</li>
+                                                <li>Etek</li>
+                                                <li>Kazak</li>
+                                                <li>Tesettür</li>
+                                                <li>Büyük Beden</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="normal-column">
+                                        <div class="category-box">
+                                            <a href="" class="sub-category-header" >Giyim</a>
+                                            <ul class="sub-item-list">
+                                                <li>Elbise</li>
+                                                <li>Tişört</li>
+                                                <li>Gömlek</li>
+                                                <li>Kot Pantolon</li>
+                                                <li>Kot Ceket</li>
+                                                <li>Pantolon</li>
+                                                <li>Mont</li>
+                                                <li>Bluz</li>
+                                                <li>Ceket</li>
+                                                <li>Etek</li>
+                                                <li>Kazak</li>
+                                                <li>Tesettür</li>
+                                                <li>Büyük Beden</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="normal-column">
+                                        <div class="category-box">
+                                            <a href="" class="sub-category-header" >Giyim</a>
+                                            <ul class="sub-item-list">
+                                                <li>Elbise</li>
+                                                <li>Tişört</li>
+                                                <li>Gömlek</li>
+                                                <li>Kot Pantolon</li>
+                                                <li>Kot Ceket</li>
+                                                <li>Pantolon</li>
+                                                <li>Mont</li>
+                                                <li>Bluz</li>
+                                                <li>Ceket</li>
+                                                <li>Etek</li>
+                                                <li>Kazak</li>
+                                                <li>Tesettür</li>
+                                                <li>Büyük Beden</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="campaign-container">
+                                        <div class="normal-column small-collection-container">
+                                            <img src="./img/kdın.jpg" alt="">
+                                            <img src="./img/kadın.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="tab-link"><a href="" class="category-header">Erkek</a>
+                            <div class="sub-nav">
+                                <div class="sub-nav-center">
+                                    <div class="sub-nav-outer">
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="campaign-container">
+                                            <div class="normal-column small-collection-container">
+                                                <img src="./img/erkek.jpg" alt="">
+                                                <img src="./img/erkek.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tab-link"><a href="" class="category-header">Anne & Çocuk</a>
+                            <div class="sub-nav">
+                                <div class="sub-nav-center">
+                                    <div class="sub-nav-outer">
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="campaign-container">
+                                            <div class="normal-column small-collection-container">
+                                                <img src="./img/annecocuk.webp" alt="">
+                                                <img src="./img/annecocuk.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tab-link"><a href="" class="category-header">Ev & Mobilya</a>
+                            <div class="sub-nav">
+                                <div class="sub-nav-center">
+                                    <div class="sub-nav-outer">
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="normal-column">
+                                            <div class="category-box">
+                                                <a href="" class="sub-category-header" >Giyim</a>
+                                                <ul class="sub-item-list">
+                                                    <li>Elbise</li>
+                                                    <li>Tişört</li>
+                                                    <li>Gömlek</li>
+                                                    <li>Kot Pantolon</li>
+                                                    <li>Kot Ceket</li>
+                                                    <li>Pantolon</li>
+                                                    <li>Mont</li>
+                                                    <li>Bluz</li>
+                                                    <li>Ceket</li>
+                                                    <li>Etek</li>
+                                                    <li>Kazak</li>
+                                                    <li>Tesettür</li>
+                                                    <li>Büyük Beden</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="campaign-container">
+                                            <div class="normal-column small-collection-container">
+                                                <img src="./img/ebmobilya.jpg" alt="">
+                                                <img src="./img/ebmobilya.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tab-link"><a href="" class="category-header">Süpermaket</a>
+                        </li>
+                        <li class="tab-link"><a href="" class="category-header">Kozmetik</a>
+                        </li>
+                        <li class="tab-link"><a href="" class="category-header">Ayakkabı & Çanta</a> 
+                        </li>
+                        <li class="tab-link"><a href="" class="category-header">Saat & Aksesuar</a> 
+                        </li>
+                        <li class="tab-link"><a href="" class="category-header">Elektronik</a> 
+                        </li>
+                        </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       <!-- carusel yapısı -->
+    
+        <div class="owl-carousel owl-theme mt-3 ">
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/Sanaözel.webp" alt="">
+                    <span>Sana Özel</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/sendeal.webp" alt="">
+                    <span>Sen De Al!</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/kurumsal.webp" alt="">
+                    <span>Kurumsal</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/Adidas_202301262144.webp" alt="">
+                    <span>Adidas</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/Dilvin_202301270049.webp" alt="">
+                    <span>Dilvin</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/gslogo.png" alt="">
+                    <span>GsStore</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/Nike.png" alt="">
+                    <span>Nike</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/Larocheposay_202301270444.webp" alt="">
+                    <span>La Roche <br>Posay</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/USPoloassn_202301280120.webp" alt="">
+                    <span>U.S Polo <br>Assn.</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/Mango_202301270525.webp" alt="">
+                    <span>Mango</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/Lav_202301270444.webp" alt="">
+                    <span>Lav</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/skechers_logo.webp" alt="">
+                    <span>SKECHERS</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/defacto-yeni-20216977.jpg" alt="">
+                    <span>DeFacto</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/lumberjack8168.jpg" alt="">
+                    <span>Lumberjack</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/urban.png" alt="">
+                    <span>Urban <br>Care</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/mavi-giyim--600.png" alt="">
+                    <span>Mavi</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/Derimod_logo.png" alt="">
+                    <span>Derimod</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/puma-logo-black.png" alt="">
+                    <span>PUMA</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/lacoste.jpg" alt="">
+                    <span>Lacoste</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-box">
+                    <img src="./img/saatvesaat.png" alt="">
+                    <span>Saat&Saat</span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-4 bannerList">
+                <img src="./img/SEPETEencokeklenenler_202206291435.webp" alt="">
+            </div>
+            <div class="col-lg-4 bannerList">
+                <img src="./img/FlasINdirimler_202206291435.webp" alt="">
+            </div>
+            <div class="col-lg-4 bannerList">
+                <img src="./img/öneçıkanlar.webp" alt="">
+            </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/ramazan.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Ramazan Ayına Özel</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/SanaOzel.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Sana Özel</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/adidasayakkabı.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Puma</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/devmarkalar.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Dev Markalarda Büyük İndirim</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/Koton.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Koton Büyük İndirimler</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/mavi.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Mavi Büyük İndirimler</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/nike.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Nike</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/iphone.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Iphone Şimdiye kadarki En gelişmiş Teknolıji</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/AltınYıldı.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Altın Yıldız</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                        <div class="owl-carousel owl-theme owlTwo">
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Flormar</b> Beyazlatıcı Krem ( Whitening) - 100 Ml RS0084</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">200,04 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Flormar</b>  lorem luptate odit i non aliquid, error reiciendis </p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">165.87TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/1_org.webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Flormar</b>Flormar Suya Dayanıklı Jel Göz Kalemi (Işıltılı Kahve) - Extreme Tattoo Gel Pencil </p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">155,55 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Gratis</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quia ratione nesciunt dolorum architecto, fuga, quae</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">126,67 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>JAKARLI</b> Unisex Zümrüt Yeşili Bisiklet Yaka Pamuk Oversize Boyfriend T-shirt</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">270.50 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Elimora</b> Yogun Leke Karşıtı</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">200.45 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Trendyolilla</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur libero inventore </p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">129,89TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, soluta quisquam, fugiat eum sapiente debitis</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">304.05TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga sunt sint delectus in asper</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">125,70 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Gratis</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">167.09TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Flormar</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">126,67 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-product">
+                                    <div class="widget-product-header">
+                                        <div class="image-container">
+                                            <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                            <div class="product-stamps">
+                                                <img src="./img/yıldızlıÜrün.webp" alt="">
+                                                <div class="upper-right">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description-text">
+                                                <p><b>Graitis</b>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="price-text">126,67 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+                    <div class="owl-carousel owl-theme owlTwo">
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Flormar</b> Beyazlatıcı Krem ( Whitening) - 100 Ml RS0084</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">200,04 TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Flormar</b>  lorem luptate odit i non aliquid, error reiciendis </p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">165.87TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/1_org.webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Flormar</b>Flormar Suya Dayanıklı Jel Göz Kalemi (Işıltılı Kahve) - Extreme Tattoo Gel Pencil </p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">155,55 TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Gratis</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quia ratione nesciunt dolorum architecto, fuga, quae</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">126,67 TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>JAKARLI</b> Unisex Zümrüt Yeşili Bisiklet Yaka Pamuk Oversize Boyfriend T-shirt</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">270.50 TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Elimora</b> Yogun Leke Karşıtı</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">200.45 TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Trendyolilla</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur libero inventore </p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">129,89TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, soluta quisquam, fugiat eum sapiente debitis</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">304.05TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga sunt sint delectus in asper</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">125,70 TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Gratis</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">167.09TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Flormar</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">126,67 TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="widget-product">
+                                <div class="widget-product-header">
+                                    <div class="image-container">
+                                        <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                        <div class="product-stamps">
+                                            <img src="./img/yıldızlıÜrün.webp" alt="">
+                                            <div class="upper-right">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <div class="description-text">
+                                            <p><b>Graitis</b>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="price-text">126,67 TL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col-lg-4 bannerList component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/ramazan.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Ramazan Ayına Özel</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right" ></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/SanaOzel.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Sana Özel</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/adidasayakkabı.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Puma</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/devmarkalar.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Dev Markalarda Büyük İndirim</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/Koton.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Koton Büyük İndirimler</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/mavi.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Mavi Büyük İndirimler</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/nike.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Nike</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/iphone.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Iphone Şimdiye kadarki En gelişmiş Teknolıji</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/AltınYıldı.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Altın Yıldız</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-3">
+        <div class="col-lg-4 bannerList">
+        </div>
+    <div class="row mt-4">
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/ramazan.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Ramazan Ayına Özel</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/SanaOzel.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Sana Özel</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 component-item">
+            <div class="img-container">
+                <div class="img-item">
+                    <img src="./selimg/adidasayakkabı.webp" alt="">
+                    <div class="campaign-summary">
+                        <span class="name">Puma</span>
+                        <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+         <div class="owl-carousel owl-theme owlTwo">
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Flormar</b> Beyazlatıcı Krem ( Whitening) - 100 Ml RS0084</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">200,04 TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Flormar</b>  lorem luptate odit i non aliquid, error reiciendis </p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">165.87TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/1_org.webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Flormar</b>Flormar Suya Dayanıklı Jel Göz Kalemi (Işıltılı Kahve) - Extreme Tattoo Gel Pencil </p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">155,55 TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Gratis</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quia ratione nesciunt dolorum architecto, fuga, quae</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">126,67 TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>JAKARLI</b> Unisex Zümrüt Yeşili Bisiklet Yaka Pamuk Oversize Boyfriend T-shirt</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">270.50 TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Elimora</b> Yogun Leke Karşıtı</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">200.45 TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Trendyolilla</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur libero inventore </p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">129,89TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, soluta quisquam, fugiat eum sapiente debitis</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">304.05TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga sunt sint delectus in asper</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">125,70 TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Gratis</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">167.09TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Flormar</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">126,67 TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="widget-product">
+                            <div class="widget-product-header">
+                                <div class="image-container">
+                                    <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                    <div class="product-stamps">
+                                        <img src="./img/yıldızlıÜrün.webp" alt="">
+                                        <div class="upper-right">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="description-text">
+                                        <p><b>Graitis</b>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                    </div>
+                                    <div class="price-container">
+                                        <span class="price-text">126,67 TL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-lg-4 bannerList component-item">
+        <div class="img-container">
+            <div class="img-item">
+                <img src="./selimg/ramazan.webp" alt="">
+                <div class="campaign-summary">
+                    <span class="name">Ramazan Ayına Özel</span>
+                    <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 component-item">
+        <div class="img-container">
+            <div class="img-item">
+                <img src="./selimg/SanaOzel.webp" alt="">
+                <div class="campaign-summary">
+                    <span class="name">Sana Özel</span>
+                    <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 component-item">
+        <div class="img-container">
+            <div class="img-item">
+                <img src="./selimg/adidasayakkabı.webp" alt="">
+                <div class="campaign-summary">
+                    <span class="name">Puma</span>
+                    <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="owl-carousel owl-theme owlTwo">
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Flormar</b> Beyazlatıcı Krem ( Whitening) - 100 Ml RS0084</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">200,04 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Flormar</b>  lorem luptate odit i non aliquid, error reiciendis </p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">165.87TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/1_org.webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Flormar</b>Flormar Suya Dayanıklı Jel Göz Kalemi (Işıltılı Kahve) - Extreme Tattoo Gel Pencil </p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">155,55 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Gratis</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quia ratione nesciunt dolorum architecto, fuga, quae</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">126,67 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>JAKARLI</b> Unisex Zümrüt Yeşili Bisiklet Yaka Pamuk Oversize Boyfriend T-shirt</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">270.50 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Elimora</b> Yogun Leke Karşıtı</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">200.45 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Trendyolilla</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur libero inventore </p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">129,89TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, soluta quisquam, fugiat eum sapiente debitis</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">304.05TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga sunt sint delectus in asper</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">125,70 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Gratis</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">167.09TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Flormar</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">126,67 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="widget-product">
+                        <div class="widget-product-header">
+                            <div class="image-container">
+                                <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                                <div class="product-stamps">
+                                    <img src="./img/yıldızlıÜrün.webp" alt="">
+                                    <div class="upper-right">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description-text">
+                                    <p><b>Graitis</b>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                </div>
+                                <div class="price-container">
+                                    <span class="price-text">126,67 TL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+        <div class="owl-carousel owl-theme owlTwo">
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Flormar</b> Beyazlatıcı Krem ( Whitening) - 100 Ml RS0084</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">200,04 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Flormar</b>  lorem luptate odit i non aliquid, error reiciendis </p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">165.87TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/1_org.webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Flormar</b>Flormar Suya Dayanıklı Jel Göz Kalemi (Işıltılı Kahve) - Extreme Tattoo Gel Pencil </p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">155,55 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Gratis</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quia ratione nesciunt dolorum architecto, fuga, quae</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">126,67 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>JAKARLI</b> Unisex Zümrüt Yeşili Bisiklet Yaka Pamuk Oversize Boyfriend T-shirt</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">270.50 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Elimora</b> Yogun Leke Karşıtı</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">200.45 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/1_tişört(1).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Trendyolilla</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur libero inventore </p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">129,89TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/1_org_zoom.webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, soluta quisquam, fugiat eum sapiente debitis</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">304.05TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/1_org_zoom (2).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Lorem</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga sunt sint delectus in asper</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">125,70 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/sampuan (1).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/EnCokSatan_202012091129.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Gratis</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">167.09TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./selimg/FlashIndirimBadge_202208171505.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Flormar</b> Dolgunlaştırıcı Canlandırıcı Saç Sakal Serumu 50 Ml</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">126,67 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget-product">
+                    <div class="widget-product-header">
+                        <div class="image-container">
+                            <img class="p-card-img" src="./selimg/el kremı(1).webp" alt="">
+                            <div class="product-stamps">
+                                <img src="./img/yıldızlıÜrün.webp" alt="">
+                                <div class="upper-right">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="description-text">
+                                <p><b>Graitis</b>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                            </div>
+                            <div class="price-container">
+                                <span class="price-text">126,67 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/ramazan.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Ramazan Ayına Özel</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/SanaOzel.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Sana Özel</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/adidasayakkabı.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Puma</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/devmarkalar.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Dev Markalarda Büyük İndirim</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/Koton.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Koton Büyük İndirimler</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/mavi.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Mavi Büyük İndirimler</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/nike.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Nike</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/iphone.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Iphone Şimdiye kadarki En gelişmiş Teknolıji</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/AltınYıldı.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Altın Yıldız</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/ramazan.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Ramazan Ayına Özel</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/SanaOzel.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Sana Özel</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/adidasayakkabı.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Puma</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/devmarkalar.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Dev Markalarda Büyük İndirim</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/Koton.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Koton Büyük İndirimler</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/mavi.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Mavi Büyük İndirimler</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/nike.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Nike</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/iphone.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Iphone Şimdiye kadarki En gelişmiş Teknolıji</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 component-item">
+                <div class="img-container">
+                    <div class="img-item">
+                        <img src="./selimg/AltınYıldı.webp" alt="">
+                        <div class="campaign-summary">
+                            <span class="name">Altın Yıldız</span>
+                            <span class="hover-text">Alışverişe Başla <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                       
+      
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="butik-list">
+                    <div class="topTitle">
+                        <h2 style="text-align: center;">Erkekler Özel En Yeni Ürünler Uygun Fiyatlarla Trendyol'da!</h2>
+                    </div>
+                    <div class="boutique-list-content">
+                        <p>Mevsim geçişlerinde tarzınıza erkek mont modelleri ile ufak dokunuşlar yapabilirsiniz. Kış koleksiyonun vazgeçilmezi bu parçaların mevsimlik ve yazlık alternatifleri yanında kürklü, astarlı ve şişme montlar da vardır. Trendyol LCW erkek mont çeşitlerinde siyah, yeşil, bej, lacivert ve ekru renkleri öne çıkar. Yazlık ve mevsimlik bu parçaları erkek tişört modelleri ile kombinleyebilirsiniz. Erkek ayakkabı çeşitlerinde sneaker, günlük ayakkabı, koşu ayakkabısı, deniz ayakkabısı ile bot ve çizme modelleri bulunur. Kullanım yerine göre erkek giyim için bu ayakkabılar arasından seçim yapabilirsiniz. Her mevsimin modası erkek sweatshirt V yaka, kapüşonlu yaka ve bisiklet yaka ile öne çıkar. Ürünlerde siyah, lacivert, gri ve beyaz rengin yoğunluğu göze çarpar. Erkek pantolon kot, kumaş, lastikli, slim fit, yüksek bel ve İtalyan kesim seçeneklerine sahiptir. Günlük hayatında hem şık olmak hem de rahat olmak isteyenler için farklı alternatiflerde bulunur. Bu alternatiflere Trendyol erkek ürün kampanyaları ile uygun fiyata sahip olabilirsiniz.</p>
+                        <h5 style="text-align: center;">Erkeklere Özel Ürünlerde Kampanyalar</h5>
+                        <p>Trendyol erkeklere özel kampanyalar ile giyimden aksesuara, ayakkabıdan çantaya pek çok üründe avantajlı fiyatlar sunar. Erkek gömlek modelleri şık ve sportif tarzı temsil eder. Erkek giyimin önemli parçasını oluşturan gömlekler; düğmeli yaka, V yaka, slim fit, kapüşonlu, kısa kollu, uzun kollu, dokulu oversize, çizgili ve sade modellere sahiptir. İş hayatında hem şık hem de rahat olmak isteyenler erkek spor ayakkabı ile bu parçaları kombinleyebilir. Erkek bot modelleri kış aylarında kombinlerin önemli bir parçasını oluşturur. Trendyol US Polo erkek gömlek çeşitleri düz renk tasarımları ile her mevsim kullanılabilir. Gömlekleri erkek hırkaları ile tamamlayabilirsiniz. Hırka çeşitleriyle iş hayatında klasik stilinizi ortaya çıkarabilirsiniz. Erkek kazak çeşitlerinde bisiklet yaka, mono yaka, balıkçı yaka, V yaka ve sıfır yaka tasarımlar dikkat çeker. Kazaklarda siyah, lacivert ve beyaz renklerin yoğun kullanılması erkeklerin kombinlerini kolaylaştırır. Erkek kaban modelleri ile de kombinlerinize vurucu dokunuşlar yapabilirsiniz. Kaban modellerinde kaşe ve süet kumaşlar kullanılır. Hem şık gösteren hem de sıcak koruyan bu parçaları Trendyol indirimli ürünler erkek kategorisinde bulabilirsiniz.</p>
+                        <h5 style="text-align: center;">Şık ve Kullanışlı Erkek Ayakkabı Modelleri</h5>
+                        <p>Erkek ayakkabı klasik modeller iş kombinlerinin önemli parçasını oluşturur. Şık ve göz alıcı tasarımıyla dikkat çeken ayakkabılar erkeklerin gardıroplarda ayrılmaz parçadır. Erkeklerin tarzını yansıtan ortopedik tabanlı, rugan, Oxford ayakkabılar özel davetlerde rahatlıkla tercih edilebilir. Günlük hayatında spor giyinenler Trendyol Lumberjack erkek spor ayakkabı ile tarzını yansıtabilir. Düz taban ayakkabıların dış materyalinde mikrofiber kullanılmıştır. Dayanıklı ve sağlam yapısıyla uzun süre kullanılabilir. Erkek eşofman takımı ile birlikte tercih edebilirsiniz. Sabah yürüyüşlerini rahat giyilen yumuşak dokulu Trendyol Kinetix erkek spor ayakkabı ile yapabilirsiniz. Trendyol Adidas erkek ayakkabı rahat ve konforlu kullanım sağlar. Yaz aylarında erkek t-shirt modelleri ile uyumlu şekilde kullanabilirsiniz. Son zamanların modası rahat kesim, tişört çeşitlerinde de kendini gösterir. Sade ve renkli tasarımları Trendyol Nike erkek ayakkabı ile kombinleyebilirsiniz. Spor tarzınızı tamamlamak için sırt çantası da kullanabilirsiniz.</p>
+                        <h5 style="text-align: center;">Göz Alıcı Erkek Cüzdan Tasarımları</h5>
+                        <p>Erkek cüzdan çeşitleri sadece paraların, kartların ve fotoğrafların muhafaza edildiği bir eşya değildir. Aynı zamanda erkek kombinlerini tamamlayan aksesuar çeşididir. Cüzdanlarda farklı bölme sayısına ve kumaşına göre değişen mekanik, orta boy ve küçük boy alternatifler bulunur. Erkekler kombinlerine son dokunuşu yapmak için hoş ve güzel kokan parfümlere ihtiyaç duyabilirler. Erkek parfüm çeşitlerinin içeriğinde defne yapraklı, portakal, nane, lavanta, mandalina ve farklı meyve aromaları gün boyu taze ve temizlik hissi yaşatır. Erkek gözlük şeffaf, kemik çerçeveli, metal çerçeveli, mavi ışık koruculuğu, dikdörtgen, yuvarlak ve baklava desen çeşitleriyle öne çıkar. Erkek kolye modelleri arasında mıknatıs, doğal taş ve parlayan küre tasarımlı zincir kolye ve çelik kolye geniş yer tutar. Erkek çanta modern ve şık tasarımlarıyla kombinlerin ayrılmaz parçasını oluşturur. Kullanım alanına göre omuz çantası, sırt çantası, bel çantası, spor çantası, laptop çantası ve valiz çeşitlerini tercih edebilirsiniz. Sportif görünmek için de erkek şapka modellerini kullanabilirsiniz.</p>
+                        <h5 style="text-align: center;">Kaliteli ve Kullanışlı Erkek Saat Modelleri</h5>
+                        <p>Saatler kıyafetleri tamamlayan yegane parçalardır. Erkek saat modellerinde dokunmatik, mıknatıslı, çelik, hasır kordonlu, su geçirmez, akıllı ve analog tasarımlar şık ve özel parçalardır. Kış aylarında erkek şişme mont ile kombinlerinizi tamamlayabilirsiniz. Kapüşonlu, cep detaylı, su ve rüzgar geçirmez bu parçaları Trendyol Avva erkek gömlek ile kombinleyerek klasik bir stil yaratabilirsiniz. Erkek deri ceket tasarımları da spor giyim için ideal bir seçim olabilir. Dış giyim kadar iç giyim de günlük kombinlerin bir parçasını oluşturur. Kıyafetler ile uyumlu erkek çorap çeşitleri arasında patik, pamuklu, sade, renkli, görünmez, bilek boy, bambu, diyabetik, lastikli ve lastiksiz tasarımlar vardır. İç giyimde pamuklu likralı, renkli, desenli ve penye erkek boxer modelleri geniş yer tutar. Erkek şort çeşitlerini de bu kategoride bulabilirsiniz. Erkek giyiminde erkek bebek kıyafetlerini de bulabilirsiniz. Erkek oyuncak çeşitlerini de kıyafetlerin yanında satın alabilirsiniz. Evde rahatından ödün vermek istemeyenler erkek pijama takımları ile konforu yakalayabilir. Yumuşak tabanlı, kürklü, deri erkek terlik modellerini de konforunuz için tercih edebilirsiniz. Kullanım yerine göre plaj terliği, bohça terliği, banyo terliği, misafir ve ev terliği çeşitlerinden bütçenize uygun olanı Trendyol’dan satın alabilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row popularBrands">
+            <div class="col-lg-6">
+                <h5>Popüler Marka ve Mağazalar</h5>
+                <ul class="popularBrands-wrapper mt-4">
+                    <li>Penti</li>
+                    <li>Watsons</li>
+                    <li>Stradivarius</li>
+                    <li>İstikbal</li>
+                    <li>Puma</li>
+                    <li>Apple</li>
+                    <li>Xiaomi</li>
+                    <li>Greyder</li>
+                    <li>Adidas</li>
+                    <li>Lacoste</li>
+                    <li>Madame Coco</li>
+                    <li>Defacto</li>
+                    <li>Tchibo</li>
+                    <li>Network</li>
+                    <li>Kiğılı</li>
+                    <li>Mango</li>
+                    <li>English Home</li>
+                    <li>Bellona</li>
+                    <li>Samsung</li>
+                    <li>Mudo</li>
+                    <li>Hummel</li>
+                    <li>Oppo</li>
+                    <li>Arçelik</li>
+                    <li>Nike</li>
+                    <li>Avva</li>
+                    <li>Pull & Bear</li>
+                    <li>Mavi</li>
+                    <li>Farmasi</li>
+                    <li>Bosch</li>
+                    <li>Migros</li>
+                    <li>Vivense</li>
+                    <li>Bershka</li>
+                    <li>Beymen</li>
+                    <li>Addax</li>
+                    <li>Derimod</li>
+                    <li>Huawei</li>
+                    <li>Monster Notebook</li>
+                    <li>DYSON</li>
+                    <li>Skechers</li>
+                    <li>Under Armour</li>
+                    <li>Koton</li>
+                    <li>Pierre Cardin</li>
+                    <li>Herbalife</li>
+                    <li>Karaca</li>
+                    <li>Avon</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h5>Popüler Sayfalar</h5>
+                <ul class="popularBrands-wrapper mt-4">
+                    <li>Bluetooth Kulaklık</li>
+                    <li>Alışveriş Kredisi</li>
+                    <li>Laptop</li>
+                    <li>İstikbal</li>
+                    <li>Kulaklık</li>
+                    <li>Apple Watch</li>
+                    <li>Buzdolabı</li>
+                    <li>TV Ünitesi</li>
+                    <li>iPhone 14 Pro</li>
+                    <li>11 11 İndirimleri</li>
+                    <li>Kahve Makinesi</li>
+                    <li>Oyuncu Koltuğu</li>
+                    <li>Saat</li>
+                    <li>Apple Airpods</li>
+                    <li>Sweatshirt</li>
+                    <li>Hediye Rehberi</li>
+                    <li>English Home</li>
+                    <li>Bellona</li>
+                    <li>Samsung</li>
+                    <li>Mudo</li>
+                    <li>Hummel</li>
+                    <li>Oppo</li>
+                    <li>Arçelik</li>
+                    <li>Nike</li>
+                    <li>Avva</li>
+                    <li>Pull & Bear</li>
+                    <li>Mavi</li>
+                    <li>Farmasi</li>
+                    <li>Bosch</li>
+                    <li>Migros</li>
+                    <li>Vivense</li>
+                    <li>Bershka</li>
+                    <li>Beymen</li>
+                    <li>Addax</li>
+                    <li>Derimod</li>
+                    <li>Huawei</li>
+                    <li>Monster Notebook</li>
+                    <li>DYSON</li>
+                    <li>Skechers</li>
+                    <li>Under Armour</li>
+                    <li>Koton</li>
+                    <li>Pierre Cardin</li>
+                    <li>Herbalife</li>
+                    <li>Karaca</li>
+                    <li>Avon</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="col-md-3">
+                <h5>Trendyol</h5>
+                <ul class="footer-content mt-3">
+                    <li>Biz Kimiz</li>
+                    <li>Kariyer</li>
+                    <li>İletişim</li>
+                    <li>Trendyol'da Satış Yap </li>
+                </ul>
+                <div class="footer-content-bottom">
+                    <ul>
+                        <li><p>Güvenli Alışveriş</p></li>
+                        <li>
+                            <div class="footer-wrapper">
+                                <div class="troy-img"></div>
+                                <div class="master-card-img"></div>
+                                <div class="visa-img"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>Hakkımızda</h5>
+                <ul class="footer-content mt-3">
+                    <li>Biz Kimiz</li>
+                    <li>Kariyer</li>
+                    <li>İletişim</li>
+                    <li><br></li>
+                </ul>
+                <div class="footer-content-bottom">
+                    <ul>
+                        <li><p>Mobil Uygulamalar</p></li>
+                        <li>
+                            <div class="footer-wrapper">
+                                <div class="app-store">
+                                    <img src="./img/app-store (1).png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>Kampanyalar</h5>
+                <ul class="footer-content mt-3">
+                    <li>Aktif Kampanyalar</li>
+                    <li>Elite Üyelik</li>
+                    <li>Hediye Fikirleri</li>
+                    <li>Trendyol Fırsatları</li>
+                </ul>
+                <div class="footer-content-bottom">
+                    <ul>
+                        <li><p>Sosyal Medya</p></li>
+                        <li>
+                            <div class="footer-wrapper">
+                                <div class="social-media">
+                                    <i class="fa-brands fa-facebook"></i>
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <i class="fa-brands fa-youtube"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>Yardım</h5>
+                <ul class="footer-content mt-3">
+                    <li>Sıkça Sorulan Sorular</li>
+                    <li>Canlı Yardım</li>
+                    <li>Nasıl İade Edebilirim</li>
+                    <li>İşlem Rehberi</li>
+                </ul>
+                <div class="footer-content-bottom">
+                    <ul>
+                        <li><button type="button" class="myBtn">Ülke Değiştir</button></li>
+                        <li>
+                            <div class="footer-wrapper-etbis">
+                                    <div class="etbis mt-3">
+                                        <img src="./img/etbis-qr.webp" alt="">
+                                    </div>
+                                    <div class="trustStamp mt-3"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 band-info">
+                    <div class="bandInfo">
+                        <div class="bandInfo-wrapper">
+                            <div class="bandInfo-wrapper-left">Engin Özdemir</div>
+                            <div class="bandInfo-wrapper-right">
+                                <ul class="bad-info d-flex">
+                                    <li>Çerez Tercihleri</li>
+                                    <li>KVK ve Gizlilik Politikası</li>
+                                    <li>Kullanım Koşulları</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="up-arrow">
+                <button class="UpBtn"><i class="fa fa-arrow-up fa-bounce"></i> Yukarı Çık</button>
+            </div>
+    </div>
+
+    
+<!-- Bootstrap Js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<!-- Owl Carousel Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Main Js -->
+<script src="app.js"></script>
+</body>
+</html>
